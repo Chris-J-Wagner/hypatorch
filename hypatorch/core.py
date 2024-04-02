@@ -122,6 +122,8 @@ class Model( L.LightningModule ):
         # Important: This property activates manual optimization.
         self.automatic_optimization = False
 
+        self = torch.compile(self)
+
         return
     
     @classmethod
